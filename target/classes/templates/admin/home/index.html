@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html th:include="layouts/admindashboard::admindashboard"
+      xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="slim-mainpanel" th:fragment="content">
+    <div class="container">
+        <div class="slim-pageheader">
+            <ol class="breadcrumb slim-breadcrumb">
+                <li aria-current="page" class="breadcrumb-item active" th:text="#{admin.breadcrumbs.dashboard}">
+                    Dashboard
+                </li>
+            </ol>
+            <h6 class="slim-pagetitle" th:text="#{admin.dashboard.title}">Dashboard</h6>
+        </div><!-- slim-pageheader -->
+
+        <div class="card card-dash-one mg-t-20">
+            <div class="row no-gutters">
+                <div class="col-lg-3">
+                    <i class="icon ion-ionic"></i>
+                    <div class="dash-content">
+                        <label class="tx-primary" th:text="#{admin.dashboard.company}">Companies</label>
+                        <h2 th:text="${companiesCount}">0</h2>
+                    </div><!-- dash-content -->
+                </div><!-- col-3 -->
+                <div class="col-lg-3">
+                    <i class="icon ion-ios-analytics-outline"></i>
+                    <div class="dash-content">
+                        <label class="tx-primary" th:text="#{admin.dashboard.groups}">Groups</label>
+                        <h2 th:text="${groupsCount}">0</h2>
+                    </div><!-- dash-content -->
+                </div><!-- col-3 -->
+                <div class="col-lg-3">
+                    <i class="icon ion-arrow-shrink"></i>
+                    <div class="dash-content">
+                        <label class="tx-primary" th:text="#{admin.dashboard.users}">Users</label>
+                        <h2 th:text="${usersCount}">0</h2>
+                    </div><!-- dash-content -->
+                </div><!-- col-3 -->
+                <div class="col-lg-3">
+                    <i class="icon ion-hammer"></i>
+                    <div class="dash-content">
+                        <label class="tx-primary" th:text="#{admin.dashboard.playbooks}">Playbooks</label>
+                        <h2 th:text="${playbooksCount}">0</h2>
+                    </div><!-- dash-content -->
+                </div><!-- col-3 -->
+            </div><!-- row -->
+        </div><!-- card -->
+
+    </div><!-- container -->
+</div><!-- slim-mainpanel -->
+
+</html>      

@@ -1,0 +1,9 @@
+.hide {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .slim-navbar .sub-item {
+        width: 100%;
+    }
+}

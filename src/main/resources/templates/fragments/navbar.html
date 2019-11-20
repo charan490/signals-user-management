@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div class="slim-navbar" th:fragment="navbar">
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link nav-item-link" th:href="@{/admin/home}">
+                    <i class="icon ion-ios-home-outline"></i>
+                    <span th:text="#{admin.menu.dashboard}">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item with-sub">
+                <a class="nav-link" href="javascript:void(0);">
+                    <i class="icon ion-ios-book-outline"></i>
+                    <span th:text="#{admin.menu.master}">Master</span>
+                </a>
+                <div class="sub-item">
+                    <ul>
+                        <li class="sub-with-sub">
+                            <a href="javascript:void(0);" th:text="#{admin.menu.master.general}">General</a>
+                            <ul>
+                                <li><a class="nav-item-link" th:href="@{/admin/company/index}"
+                                       th:text="#{admin.menu.master.general.company}">Company</a></li>
+                                <li><a class="nav-item-link" th:href="@{/admin/feature/index}"
+                                       th:text="#{admin.menu.master.general.feature}">Feature</a></li>
+                                <li><a class="nav-item-link" th:href="@{/admin/playbook/index}"
+                                       th:text="#{admin.menu.master.general.playbook}">Playbook</a>
+                                </li>
+                                <li><a class="nav-item-link" th:href="@{/admin/groups/index}"
+                                       th:text="#{admin.menu.master.general.group}">Group</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-with-sub">
+                            <a href="javascript:void(0);" th:text="#{admin.menu.master.security}">Security</a>
+                            <ul>
+                                <li><a class="nav-item-link" th:href="@{/admin/role/index}"
+                                       th:text="#{admin.menu.master.security.role}">Role</a></li>
+                                <li><a class="nav-item-link" th:href="@{/admin/user-type/index}"
+                                       th:text="#{admin.menu.master.security.usertype}">User Type</a></li>
+                                <li><a class="nav-item-link" th:href="@{/admin/user/index}"
+                                       th:text="#{admin.menu.master.security.user}">User</a></li>
+                                <!--<li><a class="nav-item-link" th:href="@{/admin/user/upload}"
+                                       th:text="#{admin.menu.master.security.userupload}">User Upload</a></li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- dropdown-menu -->
+            </li>
+        </ul>
+    </div><!-- container -->
+</div><!-- slim-navbar -->
+
+</html>

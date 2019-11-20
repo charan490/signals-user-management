@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="slim-header" th:fragment="header">
+    <div class="container">
+        <div class="slim-header-left">
+            <h2 class="slim-logo"><a href="javascript:" th:text="#{admin.header.title}">SUM</a></h2>
+        </div><!-- slim-header-left -->
+        <div class="slim-header-right">
+            <div class="dropdown dropdown-c">
+                <a class="logged-user" data-toggle="dropdown" href="#">
+                    <span th:text="#{admin.header.welcome}">Welcome</span>
+                    <span th:text="${userFirstName}"></span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <nav class="nav">
+                        <a class="nav-link" th:href="@{'/admin/user/edit/'+${userId}}"><i
+                                class="icon ion-person"></i>&nbsp;<span
+                                th:text="#{admin.header.profile}">Profile</span></a>
+                        <a class="nav-link" th:href="@{/logout}"><i class="icon ion-forward"></i>&nbsp;<span
+                                th:text="#{admin.header.logout}">Log Out</span></a>
+                    </nav>
+                </div><!-- dropdown-menu -->
+            </div><!-- dropdown -->
+        </div><!-- header-right -->
+    </div><!-- container -->
+</div><!-- slim-header -->
+
+</html>
